@@ -53,7 +53,7 @@ app.post("/api/form", async (request, response) => {
     });
 });
 
-const PORT = 80//process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
