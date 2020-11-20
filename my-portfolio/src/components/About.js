@@ -1,4 +1,4 @@
-import React, { Component, Redirect } from "react";
+import React, { Component } from "react";
 
 
 class About extends Component {
@@ -11,8 +11,8 @@ class About extends Component {
         this.setState({
             clicked: true
         });
-        <Redirect to="/contact" />
-        // this.props.history.push("/contact")
+        // <Redirect to="/contact" />
+        this.props.history.push("/contact")
         // window.location.href = "http://localhost:3000/contact";
         // console.log('clicked');
     }
