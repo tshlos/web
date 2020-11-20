@@ -32,7 +32,7 @@ export default class ContactPage extends Component {
 
         const { name, email, message } = this.state;
         
-        await axios.post("/api/form", {
+        await axios.post("https://taci-portfolio.herokuapp.com/api/form", {
             name, 
             email, 
             message
