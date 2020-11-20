@@ -15,7 +15,7 @@
   "devDependencies": {},
   "scripts": {
     "build": "npm run build:server && npm run build:client && npm run copy:client",
-    "build:server": "cd my-portfolio-server && npm i && npm run build",
+    "build:server": "cd my-portfolio-server && npm i",
     "build:client": "cd my-portfolio && npm i && npm run build",
     "copy:client": "mv my-portfolio/build my-portfolio-server",
     "start": "cd my-portfolio-server && npm start"
