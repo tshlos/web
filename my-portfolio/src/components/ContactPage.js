@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { Form, FormGroup, Input, Label } from "reactstrap";
 import Button from "./Button";
 import "./ContactPage.css";

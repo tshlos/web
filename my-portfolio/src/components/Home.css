@@ -15,8 +15,6 @@
 .name-container {
     font-size: 7.5vh;
     letter-spacing: -6px;
-    /* top: 60%; */
-    /* transform: translate(2%, 80%); */
     transform: translate(-10%, 90%);
 
     width: auto;
