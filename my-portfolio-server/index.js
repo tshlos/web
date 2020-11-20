@@ -6,6 +6,9 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.get("/", async (request, response) => {
+    response.status(200).end("helllooo");
+})
 
 app.post("/api/form", async (request, response) => {
 
