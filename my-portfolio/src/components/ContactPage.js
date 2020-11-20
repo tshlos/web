@@ -35,8 +35,9 @@ export default class ContactPage extends Component {
         await axios.post("https://taci-portfolio.herokuapp.com/api/form", {
             name, 
             email, 
-            message
-        });
+            message,
+        },
+        {withCredentials: true});
 
         this.setState({
             sent: true,
