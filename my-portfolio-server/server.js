@@ -11,10 +11,6 @@ const app = express()
 const dev = app.get("env") !== "production";
 
 
-app.get("/", async (request, response) => {
-    response.status(200).end("helllooo");
-})
-
 if(!dev) {
     app.disable("x-powered-by");
     app.use(compression());
