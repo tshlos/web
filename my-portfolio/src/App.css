@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:#051A35;
+}
+
+.bio-intro {
+    text-align: left;
+    padding-top: 150px;
+    font-size: 3vh;
+    padding-left: 200px;
+    color: #8EA4C2;
+}
+
+.bio-name {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #ff9933;
+    font-size: 7vh;
+}
+
+.bio-paragraph {
+    font-size: large;
+}
+

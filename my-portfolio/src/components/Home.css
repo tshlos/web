@@ -1,0 +1,38 @@
+.cartoon-img-container {
+    width: 50%;
+    width: auto;
+    height: auto;
+    position: fixed;
+}
+
+.cartoon-img {
+    width: 350px;
+    margin-left: 125px;
+    margin-top: 90px;
+    border-radius: 8px;
+}
+
+.name-container {
+    font-size: 7.5vh;
+    letter-spacing: -6px;
+    /* top: 60%; */
+    /* transform: translate(2%, 80%); */
+    transform: translate(-10%, 90%);
+
+    width: auto;
+    height: auto;
+    position: fixed;
+}
+
+.first-name, .last-name {
+    background: linear-gradient(to bottom, #D6AC68 0%, #ff9933 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Righteous', cursive;
+}
+
+.main-center {
+    margin: auto;
+    width: 400px;
+}
+
