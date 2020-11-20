@@ -6,6 +6,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get("/", async (request, response) => {
     response.status(200).end("helllooo");
 })
@@ -52,7 +53,7 @@ app.post("/api/form", async (request, response) => {
     });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = 80//process.env.PORT || 3001;
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
