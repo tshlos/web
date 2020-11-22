@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import  { FaGithub, FaLinkedinIn, FaMediumM, FaInfoCircle, FaHome } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaMediumM, FaInfoCircle, FaHome } from "react-icons/fa";
 import "./Social.css";
 import { NavLink } from "react-router-dom";
 
@@ -14,56 +14,62 @@ export default function Social() {
     return (
         <div>
             <div className="social-container">
-                <a 
-                    href="https://github.com/tshlos" 
+                <a
+                    href="https://github.com/tshlos"
                     target="_blank"
-                    style={{color: "#c4c4c4"}} 
-                    onMouseOver={({target}) => target.style.color="#ff9933"}
-                    onMouseOut={({target}) => target.style.color="#c4c4c4"}
+                    style={{ color: "#a8b2d1" }}
+                    onMouseOver={({ target }) => target.style.color = "#ff9933"}
+                    onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
                 >
-                <FaGithub size={23} className="github-icon" />
+                    <FaGithub size={23} className="social-icon github-icon" />
                 </a>
-                <a 
-                    href="https://www.linkedin.com/in/taci-shlos/" 
+                <a
+                    href="https://www.linkedin.com/in/taci-shlos/"
                     target="_blank"
-                    style={{color: "#c4c4c4"}}
-                    onMouseOver={({target}) => target.style.color="#ff9933"}
-                    onMouseOut={({target}) => target.style.color="#c4c4c4"}
+                    style={{ color: "#a8b2d1" }}
+                    onMouseOver={({ target }) => target.style.color = "#ff9933"}
+                    onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
                 >
-                <FaLinkedinIn size={23} className="linkedin-icon" />
+                    <FaLinkedinIn className="social-icon linkedin-icon" />
                 </a>
-                <a 
-                    href="https://tshlosberg.medium.com/" 
+                <a
+                    href="https://tshlosberg.medium.com/"
                     target="_blank"
-                    style={{color: "#c4c4c4"}}
-                    onMouseOver={({target}) => target.style.color="#ff9933"}
-                    onMouseOut={({target}) => target.style.color="#c4c4c4"}
+                    style={{ color: "#a8b2d1" }}
+                    onMouseOver={({ target }) => target.style.color = "#ff9933"}
+                    onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
                 >
-                <FaMediumM size={23} className="medium-icon" />
+                    <FaMediumM className="social-icon medium-icon" />
                 </a>
-                    { !click ?
-                        <NavLink to="/about" onClick={handleHomeInfoClick} > 
-                            <FaInfoCircle 
-                                size={23} 
-                                className="about-me"
-                                style={{color: "#c4c4c4"}}
-                                onMouseOver={({target}) => target.style.color="#ff9933"}
-                                onMouseOut={({target}) => target.style.color="#c4c4c4"}
-                            />    
-                        </NavLink>
-                        :
-                        <NavLink to="/" onClick={handleHomeInfoClick}> 
-                            <FaHome 
-                                size={23} 
-                                className="about-me"
-                                style={{color: "#c4c4c4"}}
-                                onMouseOver={({target}) => target.style.color="#ff9933"}
-                                onMouseOut={({target}) => target.style.color="#c4c4c4"}
-                            />
-                        </NavLink>
-                    }   
-                    <NavLink to="/contact"></NavLink>
+                {!click ?
+                    <NavLink to="/about" onClick={handleHomeInfoClick} >
+                        <FaInfoCircle
+                            className="social-icon about-me"
+                            style={{ color: "#a8b2d1" }}
+                            onMouseOver={({ target }) => target.style.color = "#ff9933"}
+                            onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
+                        />
+                    </NavLink>
+                    :
+                    <NavLink to="/" onClick={handleHomeInfoClick}>
+                        <FaHome
+                            className="social-icon about-me"
+                            style={{ color: "#a8b2d1" }}
+                            onMouseOver={({ target }) => target.style.color = "#ff9933"}
+                            onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
+                        />
+                    </NavLink>
+                }
+                <NavLink to="/contact"></NavLink>
             </div>
+            <footer class="footer">
+                <a class="footer-link" href="https://taci.dev/" target="_self"> Designed &amp; Built by Taci Shlosberg </a>
+            </footer>
         </div>
     )
+
+
+
+
+
 }

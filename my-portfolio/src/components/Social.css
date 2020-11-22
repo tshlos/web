@@ -1,20 +1,77 @@
 .social-container {
-    display: grid;
-    justify-items: end;
-    padding-right: 1rem;
-    width: 50px;
+    display: flex;
     position: absolute;
     right: 10px;
-    top: 50%;
-    transform: translateY(60%);
+    bottom: 0;  
+    flex-direction: column;
+    list-style: none;
+    align-items: flex-end;
+    padding-right: 10px;
 
 }  
 
-.github-icon,
-.linkedin-icon,
-.medium-icon,
-.about-me {
+.social-container::after {
+    content: '';
+    display: block;
+    flex-direction: column;
+    margin-right: 10px;
+    width: 1px;
+    height: 90px;
+    background-color: #a8b2d1;
+}
+
+.social-icon {
     margin-top: 15px;
     cursor: pointer;
+    height: 23px;
+    width: 23px;
 }
+
+@media only screen and (max-width: 760px) {
+    .social-container {
+        right: 0;
+        bottom: 40px;
+    }
+    .social-container:after {
+       display: none;
+    }
+}
+
+@media screen 
+  and (max-width: 760px) {
+    .social-icon {
+        position: relative;
+        transform: translateY(60%);
+        margin-top: 40px;
+        bottom: 20px;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    color: #ccd6f6;
+    line-height: 1;
+}
+
+.footer  a {
+    padding: 10px;
+    text-decoration: none;
+    color: #ccd6f6;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+}
+/* 
+.footer-link {
+    color: #ccd6f6;
+    text-decoration: none;
+} */
+
+
+
 

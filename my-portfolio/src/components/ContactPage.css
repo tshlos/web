@@ -7,6 +7,17 @@
     transform: translateY(25%);
 }
 
+@media only screen and (max-width: 760px) {
+  .contact-form-container {
+    
+    width: auto;
+    padding: 20px 10px;
+    margin: 20px;
+    
+    /* transform: translateY(25%); */
+  }
+}
+
 #contact-form-wrapper input {
     font-size: 1.1em;
     padding: .4em 1em .4em;

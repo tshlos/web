@@ -28,7 +28,7 @@ class About extends Component {
                             San Francisco, CA and a UI/UX enthusiast.
                         </p>
                     </p>
-                    <button className="button" onClick={this.handleGetInTouchClick}> Get in Touch </button>
+                    <button className="button get-in-touch-button" onClick={this.handleGetInTouchClick}> Get in Touch </button>
              </div>
          </div>
         )

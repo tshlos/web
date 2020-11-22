@@ -4,7 +4,7 @@ import "./Button.css";
 
 export default function Button(props) {
     return (
-        <div>
+        <div className={props.className}>
             <button className="button" > 
                 {props.text}
             </button>

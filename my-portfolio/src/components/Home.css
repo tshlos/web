@@ -1,25 +1,37 @@
 .cartoon-img-container {
-    width: 50%;
-    width: auto;
-    height: auto;
-    position: fixed;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cartoon-img {
     width: 350px;
-    margin-left: 125px;
-    margin-top: 90px;
     border-radius: 8px;
+    margin-left: 50px;
+    margin-top: 100px;
 }
 
+@media only screen and (max-width: 760px) {
+    .cartoon-img {
+        width: 250px;
+    }
+}
+
+
 .name-container {
+    /* display: inline; */
+    /* left: 50px;
+    bottom: 50px; */
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    margin-top: -3em;
+    padding-left: 40px;
+    /* margin-bottom: 15em; */
+
     font-size: 7.5vh;
     letter-spacing: -6px;
-    transform: translate(-10%, 90%);
-
-    width: auto;
-    height: auto;
-    position: fixed;
 }
 
 .first-name, .last-name {
@@ -29,8 +41,21 @@
     font-family: 'Righteous', cursive;
 }
 
-.main-center {
-    margin: auto;
-    width: 400px;
+
+@media only screen and (max-width: 760px) {
+    .name-container {
+        /* position: relative; */
+        font-size: 5vh;
+        letter-spacing: -6px;
+
+        /* left: 40px;
+        top: 50px; */
+    }
 }
+
+
+
+
+
+
 
