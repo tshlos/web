@@ -5,14 +5,14 @@
 }
 
 body {
-    background:#051A35;
+    /* background:#051A35; */
+    background: #1a2930;
 }
 
 .bio-intro {
     text-align: left;
     padding-top: 300px;
     font-size: 3vh;
-  
     color: #8EA4C2;
 }
 
@@ -31,7 +31,6 @@ body {
         font-size: 3vh;
         color: #8EA4C2;
     }
-
 
     .get-in-touch-button, .bio-intro {
         margin-left: 30px;

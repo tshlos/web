@@ -1,13 +1,12 @@
 .button {
-  /* position: relative;
-  margin-top: 30px;
-  margin-left: 200px; */
-  background :#055388;
+  background: #3f5374;
+  color: #95acca;
+  box-shadow: 4px 4px 0px 0px #bac5d4;
   border: 1px solid #ff9933;
   padding: 15px;
   font-size: 0.6em;
-  color: #8099BA;
-  box-shadow: 4px 4px 0px 0px #8099BA;
+ 
+  
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   letter-spacing: 4px;
@@ -18,7 +17,6 @@
 }
 
 /* .get-in-touch-button */
-
 @media only screen and (max-width: 760px) {
   .send-form-button {
     display: flex;
@@ -29,5 +27,5 @@
 .button:hover {
   left: 3px;
   top: 3px;
-  box-shadow: 0 0 0 0 #8099BA;
+  box-shadow: 0 0 0 0 #95acca;
 }

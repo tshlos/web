@@ -17,39 +17,31 @@
     }
 }
 
-
 .name-container {
-    /* display: inline; */
-    /* left: 50px;
-    bottom: 50px; */
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
-    margin-top: -3em;
-    padding-left: 40px;
-    /* margin-bottom: 15em; */
-
+    width: 700px;
+    margin-top: -2.3em;
+    padding-left: 10px;
     font-size: 7.5vh;
     letter-spacing: -6px;
 }
 
 .first-name, .last-name {
-    background: linear-gradient(to bottom, #D6AC68 0%, #ff9933 100%);
+    background: linear-gradient(to bottom, #95acca 0%, #3f5374 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Righteous', cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 
 @media only screen and (max-width: 760px) {
     .name-container {
-        /* position: relative; */
         font-size: 5vh;
         letter-spacing: -6px;
-
-        /* left: 40px;
-        top: 50px; */
+        padding-left: 80px;
+        padding-top: -3em;
     }
 }
 

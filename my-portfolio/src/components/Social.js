@@ -18,7 +18,7 @@ export default function Social() {
                     href="https://github.com/tshlos"
                     target="_blank"
                     style={{ color: "#a8b2d1" }}
-                    onMouseOver={({ target }) => target.style.color = "#ff9933"}
+                    onMouseOver={({ target }) => target.style.color = "#f7882F"}
                     onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
                 >
                     <FaGithub size={23} className="social-icon github-icon" />
@@ -27,7 +27,7 @@ export default function Social() {
                     href="https://www.linkedin.com/in/taci-shlos/"
                     target="_blank"
                     style={{ color: "#a8b2d1" }}
-                    onMouseOver={({ target }) => target.style.color = "#ff9933"}
+                    onMouseOver={({ target }) => target.style.color = "#f7882F"}
                     onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
                 >
                     <FaLinkedinIn className="social-icon linkedin-icon" />
@@ -36,7 +36,7 @@ export default function Social() {
                     href="https://tshlosberg.medium.com/"
                     target="_blank"
                     style={{ color: "#a8b2d1" }}
-                    onMouseOver={({ target }) => target.style.color = "#ff9933"}
+                    onMouseOver={({ target }) => target.style.color = "#f7882F"}
                     onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
                 >
                     <FaMediumM className="social-icon medium-icon" />
@@ -46,7 +46,7 @@ export default function Social() {
                         <FaInfoCircle
                             className="social-icon about-me"
                             style={{ color: "#a8b2d1" }}
-                            onMouseOver={({ target }) => target.style.color = "#ff9933"}
+                            onMouseOver={({ target }) => target.style.color = "#f7882F"}
                             onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
                         />
                     </NavLink>
@@ -55,7 +55,7 @@ export default function Social() {
                         <FaHome
                             className="social-icon about-me"
                             style={{ color: "#a8b2d1" }}
-                            onMouseOver={({ target }) => target.style.color = "#ff9933"}
+                            onMouseOver={({ target }) => target.style.color = "#f7882F"}
                             onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
                         />
                     </NavLink>
