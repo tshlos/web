@@ -2,12 +2,15 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const cors = require('cors')
 const app = express();
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post("/api/form", async (request, response) => {
+app.post("https://taci-portfolio.herokuapp.com/api/form", async (request, response) => {
+// app.post("/api/form", async (request, response) => {q
 
     const htmlEmail = `
         <p>New message from your Porfolio<p>
@@ -19,7 +22,6 @@ app.post("/api/form", async (request, response) => {
         <h3>Message</h3>
         <p>${request.body.message}</p>
     `
-
     let transporter = await nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 465,
