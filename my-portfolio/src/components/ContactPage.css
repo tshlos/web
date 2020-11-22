@@ -49,14 +49,10 @@ input, textarea {
 
 .success-msg {
   color: #57A773;
-  margin: auto;
-  padding-left: 200px;
-  padding-top: 15px;
+  padding-top: 20px;
 }
 
 .error-msg {
   color: #EE6352;
-  margin: auto;
-  padding-left: 200px;
-  padding-top: 15px;
+  padding-top: 20px;
 }

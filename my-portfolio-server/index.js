@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", CLIENT_ORIGIN);
+    res.header("Access-Control-Allow-Origin", "https://taci-portfolio.herokuapp.com/api/form");
     res.header(
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"
@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("https://taci-portfolio.herokuapp.com/api/form", async (request, response) => {
-// app.post("/api/form", async (request, response) => {q
+// app.post("/api/form", async (request, response) => {
 
     const htmlEmail = `
         <p>New message from your Porfolio<p>

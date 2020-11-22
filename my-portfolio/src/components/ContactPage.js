@@ -38,6 +38,7 @@ export default class ContactPage extends Component {
         };
 
         const response = await fetch("https://taci-portfolio.herokuapp.com/api/form", {
+        // const response = await fetch("/api/form", {
             method: "POST",
             mode: "cors", 
             headers: {
