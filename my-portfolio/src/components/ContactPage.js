@@ -29,23 +29,51 @@ export default class ContactPage extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault();
-
-        const { name, email, message } = this.state;
         
-        await axios.post("https://taci-portfolio.herokuapp.com/api/form", {
-        // await axios.post("/api/form", {
-            name, 
-            email, 
-            message,
-        },
-        {withCredentials: true});
+        const { name, email, message } = this.state;
+        const contact = {
+            name,
+            email,
+            message
+        };
+
+        const response = await fetch("https://taci-portfolio.herokuapp.com/api/form", {
+            method: "POST",
+            mode: "cors", 
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: "include",
+            body: JSON.stringify(contact)
+        });
+        console.log('response:', response);
 
         this.setState({
-            sent: true,
+            sent: true
         });
-
         this.resetForm();
     }
+
+
+    // handleSubmit = async (event) => {
+    //     event.preventDefault();
+
+    //     const { name, email, message } = this.state;
+        
+    //     await axios.post("https://taci-portfolio.herokuapp.com/api/form", {
+    //     // await axios.post("/api/form", {
+    //         name, 
+    //         email, 
+    //         message,
+    //     },
+    //     {withCredentials: true});
+
+    //     this.setState({
+    //         sent: true,
+    //     });
+
+    //     this.resetForm();
+    // }
 
     resetForm = () => {
         this.setState({
