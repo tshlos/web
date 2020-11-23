@@ -21,8 +21,10 @@ const corsOptions = {
     optionsSuccessStatus: 204,
     allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
     credentials: true,
+    preflightContinue: false,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
 }
+
 app.use(cors(corsOptions));
 
 app.post("/api/form", async (request, response, next) => {
@@ -64,12 +66,6 @@ app.post("/api/form", async (request, response, next) => {
         }
         next();
     });
-    if ('OPTIONS' == request.method) {
-        request.send(200);
-    }
-    else {
-        next();
-    }
 });
 
 
