@@ -5,6 +5,7 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
 
+console.log('hello');
 
 const corsOptions = {
     origin: ["https://taci.dev", "https://taci-portfolio.herokuapp.com"],
