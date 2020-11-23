@@ -5,21 +5,16 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
 
-app.use(cors());
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://taci-portfolio.herokuapp.com/api/form");
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    res.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE");
-    res.header("Access-Control-Allow-Credentials", true);
-    if (req.method === "OPTIONS") {
-      return res.sendStatus(204);
-    }
-    next();
-});
 
+const corsOptions = {
+    "origin": ["https://taci.dev", "https://taci-portfolio.herokuapp.com"],
+    "optionsSuccessStatus": 204,
+    "allowedHeaders": ["Origin", "X-Requested-With", "Content-Type", "Accept"],
+    "credentials": true,
+    "preflightContinue": false,
+    "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+}
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
