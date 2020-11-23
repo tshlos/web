@@ -39,7 +39,7 @@ app.post("/api/form", (request, response, next) => {
     `
 
     let transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
+        service: "Gmail",
         port: 465,
         secure: true,
         requireTLS: true,
