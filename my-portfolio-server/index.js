@@ -6,7 +6,6 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
-app.options('*', cors());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "https://taci-portfolio.herokuapp.com/api/form");
     res.header(
