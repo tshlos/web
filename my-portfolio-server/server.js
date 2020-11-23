@@ -6,7 +6,6 @@ const morgan = require("morgan");
 const path = require("path");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-const smtpTransport = require("nodemailer-smtp-transport");
 const cors = require("cors");
 const app = express();
 
@@ -39,7 +38,7 @@ app.post("/api/form", async (request, response, next) => {
         <h3>Message</h3>
         <p>${request.body.message}</p>
     `
-    let transporter = await nodemailer.createTransport(smtpTransport({
+    let transporter = await nodemailer.createTransport({
         service: "gmail",
         host: "smtp.gmail.com",
         port: 465,
@@ -48,7 +47,7 @@ app.post("/api/form", async (request, response, next) => {
             user: process.env.GMAIL_USER,
             pass: process.env.GMAIL_PASSWORD
         },
-    }));
+    });
  
     let mail = {
         from: request.body.email,
