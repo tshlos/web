@@ -8,11 +8,11 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
+const aws = require('aws-sdk');
 
 const normalizePort = port => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 3000);
 
-const dev = app.get("env") !== "production";
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -25,6 +25,12 @@ const corsOptions = {
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
 }
 app.use(cors(corsOptions));
+
+
+let s3 = new aws.S3({
+  gmailUser: process.env.GMAIL_USER,
+  gmailPass: process.env.GMAIL_PASSWORD
+});
 
 app.post("/api/form", (request, response, next) => {
     const htmlEmail = `
@@ -44,8 +50,8 @@ app.post("/api/form", (request, response, next) => {
         secure: true,
         requireTLS: true,
         auth: {
-            user: process.env.GMAIL_USER,
-            pass: process.env.GMAIL_PASSWORD
+            user: gmailUser,
+            pass: gmailPass
         },
     });
  
@@ -77,7 +83,7 @@ app.post("/api/form", (request, response, next) => {
     });
 });
 
-
+const dev = app.get("env") !== "production";
 if(!dev) {
     app.disable("x-powered-by");
     app.use(compression());
