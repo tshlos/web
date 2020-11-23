@@ -17,9 +17,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post("/api/form", async (request, response) => {
-// app.post("/api/form", async (request, response) => {
-
+app.post("/api/form", async (request, response, next) => {
     const htmlEmail = `
         <p>New message from your Porfolio<p>
         <h3>Contact Details</h3>
@@ -56,6 +54,7 @@ app.post("/api/form", async (request, response) => {
             console.log("Message sent");
             response.json({ message: `Message sent: %s, ${data.message}` })
         }
+        next();
     });
 });
 
