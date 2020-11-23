@@ -35,9 +35,9 @@ const oauth2Client = new OAuth2(
 );
 
 oauth2Client.setCredentials({
-    refresh_token: "1//04YBxGg4QUByZCgYIARAAGAQSNwF-L9IruukvnqDl9LjilE9xFALOi670TKhquXikpLkdLKzCZH35CbgQz0LK9FFg0pWbp-fSI_s"
+    refresh_token: process.env.REFRESH_TOKEN
 });
-const accessToken = oauth2Client.getAccessToken()
+const accessToken = oauth2Client.getAccessToken();
 
 app.post("/api/form", async (request, response, next) => {
     const htmlEmail = `
