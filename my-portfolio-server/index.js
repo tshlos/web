@@ -7,11 +7,11 @@ const app = express();
 
 
 const corsOptions = {
-    "origin": ["https://taci.dev", "https://taci-portfolio.herokuapp.com"],
-    "optionsSuccessStatus": 204,
-    "allowedHeaders": ["Origin", "X-Requested-With", "Content-Type", "Accept"],
-    "credentials": true,
-    "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+    origin: ["https://taci.dev", "https://taci-portfolio.herokuapp.com"],
+    optionsSuccessStatus: 204,
+    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
 }
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
