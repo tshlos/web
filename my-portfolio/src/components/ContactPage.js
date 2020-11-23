@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Form, FormGroup, Input, Label } from "reactstrap";
 import Button from "./Button";
 import "./ContactPage.css";
-import axios from "axios";
-
 
 export default class ContactPage extends Component {
 
@@ -25,7 +23,6 @@ export default class ContactPage extends Component {
             [name]: target.value
         })
     }
-
 
     handleSubmit = async (event) => {
         event.preventDefault();
@@ -55,27 +52,6 @@ export default class ContactPage extends Component {
         this.resetForm();
     }
 
-
-    // handleSubmit = async (event) => {
-    //     event.preventDefault();
-
-    //     const { name, email, message } = this.state;
-        
-    //     await axios.post("https://taci-portfolio.herokuapp.com/api/form", {
-    //     // await axios.post("/api/form", {
-    //         name, 
-    //         email, 
-    //         message,
-    //     },
-    //     {withCredentials: true});
-
-    //     this.setState({
-    //         sent: true,
-    //     });
-
-    //     this.resetForm();
-    // }
-
     resetForm = () => {
         this.setState({
             name: "",
@@ -83,8 +59,6 @@ export default class ContactPage extends Component {
             message: ""
         });
     }
-
-
 
     render() {
         return (
