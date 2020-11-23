@@ -8,6 +8,7 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
+const aws = require("aws-sdk");
 
 const normalizePort = port => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 3000);
@@ -15,6 +16,11 @@ const PORT = normalizePort(process.env.PORT || 3000);
 const dev = app.get("env") !== "production";
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+let s3 = new aws.s3({
+    gmailUser: process.env.GMAIL_USER,
+    gmailPass: process.env.GMAIL_PASSWORD
+})
 
 const corsOptions = {
     origin: ["https://taci.dev", "https://taci-portfolio.herokuapp.com"],
@@ -43,8 +49,8 @@ app.post("/api/form", (request, response, next) => {
         port: 465,
         secure: true,
         auth: {
-            user: process.env.GMAIL_USER,
-            pass: process.env.GMAIL_PASSWORD,
+            user: s3.gmailUser,
+            pass: s3.gmailPass
         },
         tls: {
             rejectUnauthorized: false,
