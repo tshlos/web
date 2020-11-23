@@ -39,7 +39,7 @@ app.post("/api/form", (request, response, next) => {
     `
 
     let transporter = nodemailer.createTransport({
-        service: "Gmail",
+        host: "smtp.gmail.com",
         port: 465,
         secure: true,
         requireTLS: true,
@@ -92,6 +92,10 @@ if(!dev) {
 
 if(dev) {
     app.use(morgan("dev"));
+}
+
+if (process.env.NODE_ENV !== "production") { 
+    require("dotenv").config();
 }
 
 const server = createServer(app);
