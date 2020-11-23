@@ -27,7 +27,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.post("/api/form", async (request, response, next) => {
+app.post("/api/form", (request, response, next) => {
     const htmlEmail = `
         <p>New message from your Porfolio<p>
         <h3>Contact Details</h3>
@@ -38,12 +38,12 @@ app.post("/api/form", async (request, response, next) => {
         <h3>Message</h3>
         <p>${request.body.message}</p>
     `
-    let transporter = await nodemailer.createTransport({
-        service: "gmail",
+    let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 465,
         secure: true,
         auth: {
+            type: "OAuth2",
             user: process.env.GMAIL_USER,
             pass: process.env.GMAIL_PASSWORD,
         },
