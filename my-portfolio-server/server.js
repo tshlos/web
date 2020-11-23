@@ -13,6 +13,8 @@ const normalizePort = port => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 3000);
 
 const dev = app.get("env") !== "production";
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const corsOptions = {
     origin: ["https://taci.dev", "https://taci-portfolio.herokuapp.com"],
@@ -22,8 +24,6 @@ const corsOptions = {
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
 }
 app.use(cors(corsOptions));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/api/form", async (request, response, next) => {
     const htmlEmail = `
@@ -64,6 +64,12 @@ app.post("/api/form", async (request, response, next) => {
         }
         next();
     });
+    if ('OPTIONS' == request.method) {
+        resquest.send(200);
+    }
+    else {
+        next();
+    }
 });
 
 
@@ -72,11 +78,11 @@ if(!dev) {
     app.use(compression());
     app.use(morgan("common"));
 
-    app.use(express.static(path.resolve(__dirname, "build")))
+    app.use(express.static(path.resolve(__dirname, "build")));
 
     app.get("*", (req, res) => {
         res.sendFile(path.resolve(__dirname, "build", "index.html"))
-    })
+    });
 }
 
 if(dev) {
