@@ -28,6 +28,17 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+const oauth2Client = new OAuth2(
+    CLIENT_ID,
+    CLIENT_SECRET,
+    "https://developers.google.com/oauthplayground"
+);
+
+oauth2Client.setCredentials({
+    refresh_token: "1//04YBxGg4QUByZCgYIARAAGAQSNwF-L9IruukvnqDl9LjilE9xFALOi670TKhquXikpLkdLKzCZH35CbgQz0LK9FFg0pWbp-fSI_s"
+});
+const accessToken = oauth2Client.getAccessToken()
+
 app.post("/api/form", async (request, response, next) => {
     const htmlEmail = `
         <p>New message from your Porfolio<p>
@@ -50,8 +61,8 @@ app.post("/api/form", async (request, response, next) => {
             pass: process.env.GMAIL_PASSWORD,
             clientId: process.env.CLIENT_ID,
             clientSecret: process.env.CLIENT_SECRET,
-
-
+            refreshToken: process.env.REFRESH_TOKEN,
+            accessToken: process.env.ACCESS_TOKEN
         },
     });
  
