@@ -8,7 +8,6 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
-const aws = require('aws-sdk');
 
 const normalizePort = port => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 3000);
@@ -26,11 +25,6 @@ const corsOptions = {
 }
 app.use(cors(corsOptions));
 
-
-let s3 = new aws.S3({
-  gmailUser: process.env.GMAIL_USER,
-  gmailPass: process.env.GMAIL_PASSWORD
-});
 
 app.post("/api/form", (request, response, next) => {
     const htmlEmail = `
@@ -50,8 +44,8 @@ app.post("/api/form", (request, response, next) => {
         secure: true,
         requireTLS: true,
         auth: {
-            user: s3.gmailUser,
-            pass: s3.gmailPass
+            user: process.env.GMAIL_USER,
+            pass: process.env.GMAIL_PASSWORD
         },
     });
  
