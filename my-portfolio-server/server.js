@@ -42,7 +42,7 @@ app.post("/api/form", (request, response, next) => {
         host: "smtp.gmail.com",
         // port: 465,
         // secure: true,
-        port: 25,
+        port: 587,
         secure: false,
         requireTLS: true,
         auth: {
