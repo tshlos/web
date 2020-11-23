@@ -24,7 +24,6 @@ const corsOptions = {
     preflightContinue: false,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
 }
-
 app.use(cors(corsOptions));
 
 app.post("/api/form", (request, response, next) => {
@@ -38,15 +37,18 @@ app.post("/api/form", (request, response, next) => {
         <h3>Message</h3>
         <p>${request.body.message}</p>
     `
+
     let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 465,
         secure: true,
         auth: {
-            type: "OAuth2",
             user: process.env.GMAIL_USER,
             pass: process.env.GMAIL_PASSWORD,
         },
+        tls: {
+            rejectUnauthorized: false,
+        }
     });
  
     let mail = {
@@ -56,6 +58,14 @@ app.post("/api/form", (request, response, next) => {
         text: request.body.message, 
         html: htmlEmail, 
     };
+
+    transporter.verify(function(error, success) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log("Server is ready to take our messages");
+        }
+      });
 
     transporter.sendMail(mail, (error, data) => {
         if(error) {
