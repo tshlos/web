@@ -43,7 +43,6 @@ app.post("/api/form", async (request, response, next) => {
         port: 465,
         secure: true,
         auth: {
-            type: "OAuth2",
             user: process.env.GMAIL_USER,
             pass: process.env.GMAIL_PASSWORD
         },
