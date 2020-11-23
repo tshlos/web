@@ -4,7 +4,6 @@ const {createServer} = require("http");
 const compression = require("compression");
 const morgan = require("morgan");
 const path = require("path");
-const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
@@ -13,7 +12,6 @@ const app = express();
 const normalizePort = port => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 3000);
 
-const app = express()
 const dev = app.get("env") !== "production";
 
 const corsOptions = {
