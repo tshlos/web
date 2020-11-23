@@ -50,8 +50,8 @@ app.post("/api/form", (request, response, next) => {
         secure: true,
         requireTLS: true,
         auth: {
-            user: gmailUser,
-            pass: gmailPass
+            user: s3.gmailUser,
+            pass: s3.gmailPass
         },
     });
  
