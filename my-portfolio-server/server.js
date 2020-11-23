@@ -8,7 +8,6 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
-const {google} = require('googleapis');
 
 const normalizePort = port => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 3000);
@@ -28,17 +27,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const oauth2Client = new OAuth2(
-    CLIENT_ID,
-    CLIENT_SECRET,
-    "https://developers.google.com/oauthplayground"
-);
-
-oauth2Client.setCredentials({
-    refresh_token: process.env.REFRESH_TOKEN
-});
-const accessToken = oauth2Client.getAccessToken();
-
 app.post("/api/form", async (request, response, next) => {
     const htmlEmail = `
         <p>New message from your Porfolio<p>
@@ -56,13 +44,8 @@ app.post("/api/form", async (request, response, next) => {
         port: 465,
         secure: true,
         auth: {
-            type: "OAuth2",
             user: process.env.GMAIL_USER,
             pass: process.env.GMAIL_PASSWORD,
-            clientId: process.env.CLIENT_ID,
-            clientSecret: process.env.CLIENT_SECRET,
-            refreshToken: process.env.REFRESH_TOKEN,
-            accessToken: process.env.ACCESS_TOKEN
         },
     });
  
