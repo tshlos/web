@@ -65,7 +65,7 @@ app.post("/api/form", async (request, response, next) => {
         next();
     });
     if ('OPTIONS' == request.method) {
-        resquest.send(200);
+        request.send(200);
     }
     else {
         next();
