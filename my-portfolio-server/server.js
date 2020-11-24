@@ -42,16 +42,12 @@ app.post("/api/form", (request, response, next) => {
         host: "smtp.gmail.com",
         port: 465,
         secure: true,
-        // port: 587,
-        // secure: false,
         requireTLS: true,
         auth: {
             user: process.env.GMAIL_USER,
             pass: process.env.GMAIL_PASSWORD
         },
     });
-    console.log("gmail", process.env.GMAIL_USER, "username" )
-    console.log("gmail", process.env.GMAIL_PASSWORD, "password")
  
     let mail = {
         from: request.body.email,
@@ -60,7 +56,6 @@ app.post("/api/form", (request, response, next) => {
         text: request.body.message, 
         html: htmlEmail, 
     };
-    console.log('mail', mail);
 
     transporter.verify(function(error, success) {
         if (error) {
