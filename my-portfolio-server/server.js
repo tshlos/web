@@ -50,6 +50,8 @@ app.post("/api/form", (request, response, next) => {
             pass: process.env.GMAIL_PASSWORD
         },
     });
+    console.log("gmail", process.env.GMAIL_USER, "username" )
+    console.log("gmail", process.env.GMAIL_PASSWORD, "password")
  
     let mail = {
         from: request.body.email,
