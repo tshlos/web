@@ -8,7 +8,7 @@
     width: 350px;
     border-radius: 8px;
     margin-left: 50px;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 @media only screen and (max-width: 760px) {
@@ -21,11 +21,11 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
     margin-top: -2.3em;
     padding-left: 10px;
     font-size: 7.5vh;
     letter-spacing: -6px;
+    width: 700px;
 }
 
 .first-name, .last-name {
@@ -40,8 +40,9 @@
     .name-container {
         font-size: 5vh;
         letter-spacing: -6px;
-        padding-left: 80px;
+        padding-left: 15px;
         padding-top: -3em;
+        width: auto;
     }
 }
 
