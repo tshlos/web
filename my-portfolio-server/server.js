@@ -60,6 +60,7 @@ app.post("/api/form", (request, response, next) => {
         text: request.body.message, 
         html: htmlEmail, 
     };
+    console.log('mail', mail);
 
     transporter.verify(function(error, success) {
         if (error) {
