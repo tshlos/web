@@ -55,7 +55,7 @@ app.post("/api/form", (request, response, next) => {
  
     let mail = {
         from: request.body.email,
-        to: process.env.GMAIL_USER, 
+        to: process.env.TO_GMAIL_USER, 
         subject: "You have a new message!", 
         text: request.body.message, 
         html: htmlEmail, 
