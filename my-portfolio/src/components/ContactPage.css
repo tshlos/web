@@ -4,7 +4,7 @@
     margin: auto;
     padding: 50px 100px;
     border-top: 10px solid #f7882F;
-    transform: translateY(50%);
+    transform: translateY(30%);
 }
 
 @media only screen and (max-width: 760px) {
