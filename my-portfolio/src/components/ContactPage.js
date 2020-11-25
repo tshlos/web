@@ -99,8 +99,8 @@ export default class ContactPage extends Component {
                             />
                         </FormGroup>
                         <Button className="send-form-button" text="Send"/>
-                        {this.state.sent === true && <p className="success-msg">Email sent</p>}
-                        {this.state.sent === false && <p className="error-msg">Email not sent</p>}
+                        {this.state.sent === true && <p className="success-msg">Thanks for getting in touch. I'll get back to you soon.</p>}
+                        {this.state.sent === false && <p className="error-msg">Message not sent. Please try again.</p>}
                     </Form>   
                 </div>
             </div>
