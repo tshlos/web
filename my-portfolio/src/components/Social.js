@@ -1,15 +1,10 @@
 import React, { useState } from "react";
-import { FaGithub, FaLinkedinIn, FaMediumM, FaInfoCircle, FaHome } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaMediumM, FaInfoCircle, FaHome, FaTwitter } from "react-icons/fa";
 import "./Social.css";
 import { NavLink } from "react-router-dom";
 
 
-export default function Social() {
-
-    const [click, setClick] = useState(false);
-
-    const handleHomeInfoClick = () => setClick(!click);
-
+function Social() {
 
     return (
         <div>
@@ -41,35 +36,21 @@ export default function Social() {
                 >
                     <FaMediumM className="social-icon medium-icon" />
                 </a>
-                {!click ?
-                    <NavLink to="/about" onClick={handleHomeInfoClick} >
-                        <FaInfoCircle
-                            className="social-icon about-me"
-                            style={{ color: "#a8b2d1" }}
-                            onMouseOver={({ target }) => target.style.color = "#f7882F"}
-                            onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
-                        />
-                    </NavLink>
-                    :
-                    <NavLink to="/" onClick={handleHomeInfoClick}>
-                        <FaHome
-                            className="social-icon about-me"
-                            style={{ color: "#a8b2d1" }}
-                            onMouseOver={({ target }) => target.style.color = "#f7882F"}
-                            onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
-                        />
-                    </NavLink>
-                }
+                <a
+                    href="https://twitter.com/tshloss"
+                    target="_blank"
+                    style={{ color: "#a8b2d1" }}
+                    onMouseOver={({ target }) => target.style.color = "#f7882F"}
+                    onMouseOut={({ target }) => target.style.color = "#a8b2d1"}
+                >
+                    <FaTwitter className="social-icon twitter-icon" />
+                </a>
                 <NavLink to="/contact"></NavLink>
             </div>
             <footer class="footer">
-                <a class="footer-link" href="https://taci.dev/" target="_self"> Designed &amp; Built by Taci Shlosberg </a>
+                <a class="footer-link" href="https://taci.dev/" target="_self"> Built by Taci Shlosberg </a>
             </footer>
         </div>
     )
-
-
-
-
-
 }
+export default Social;

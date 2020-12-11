@@ -6,13 +6,17 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "devicon-react-svg": "^0.2.3",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
+    "react-devicon": "^0.1.9",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.3.1",
     "react-scripts": "4.0.0",
+    "react-transition-group": "^4.4.1",
     "reactstrap": "^8.7.1",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
@@ -40,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-svg-loader": "^3.0.3"
   }
 }

@@ -1,0 +1,17 @@
+.about-me {
+    font-size: large;
+    color: #8EA4C2;
+    line-height: 1.6;
+    font-family: 'Dosis', sans-serif;
+}
+.cartoon-img {
+    width: 200px;
+    border-radius: 8px;
+    height: 200px;
+    margin-left: 15px;
+    float: right;
+}
+
+.about-me-paragraph {
+    line-height: 40px;
+}

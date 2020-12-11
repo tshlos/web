@@ -1,53 +1,56 @@
-.cartoon-img-container {
-    width: 250px;
-    margin-left: auto;
-    margin-right: auto;
+.hello-area,
+.about-area,
+.skills-area,
+.contact-area {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.text-part {
+  width: 65%;
+  height: 80%;
 }
 
-.cartoon-img {
-    width: 350px;
-    border-radius: 8px;
-    margin-left: 50px;
-    margin-top: 100px;
+.hello-area,
+.about-area,
+.skills-area,
+.contact-area {
+  color: #8EA4C2;
+}
+.about-me-header {
+  color: #f7882F;
+  font-size: 3vh;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.skills-header {
+  color: #f7882F;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 3vh;
+  font-weight: bold;
+}
+.get-in-touch-header {
+  color: #f7882F;
+  margin-bottom: 25px;
+  font-size: 6vh;
+}
+.get-in-touch-text {
+  margin-bottom: 25px;
 }
 
-@media only screen and (max-width: 760px) {
-    .cartoon-img {
-        width: 250px;
-    }
+section {
+  margin: 0px auto;
+  padding: 100px, 0px;
+  max-width: 1000px;
+  min-height: 90vh;
 }
-
-.name-container {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -2.2em;
-    font-size: 7.5vh;
-    letter-spacing: -6px;
-    width: 8em;
+section::before{
+  box-sizing: inherit;
 }
-
-.first-name, .last-name {
-    background: linear-gradient(to bottom, #95acca 0%, #3f5374 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Open Sans Condensed', sans-serif;
+section::after{
+  box-sizing: inherit;
 }
-
-
-@media only screen and (max-width: 760px) {
-    .name-container {
-        font-size: 5vh;
-        letter-spacing: -6px;
-        padding-left: 15px;
-        padding-top: -2em;
-        width: auto;
-    }
-}
-
-
-
-
-
-
-

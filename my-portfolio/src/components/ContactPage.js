@@ -95,7 +95,7 @@ export default class ContactPage extends Component {
                                 value={this.state.message}
                                 required
                                 onChange={this.handleChange}
-                                rows="5"
+                                rows="7"
                             />
                         </FormGroup>
                         <Button className="send-form-button" text="Send"/>

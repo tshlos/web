@@ -1,57 +1,8 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    font-family: 'Dosis', sans-serif;
 }
-
 body {
     /* background:#051A35; */
     background: #1a2930;
-}
-
-.bio-intro {
-    text-align: left;
-    padding-top: 230px;
-    font-size: 3vh;
-    color: #8EA4C2;
-}
-
-.get-in-touch-button, .bio-intro {
-      margin-left: 180px;
-}
-
-.get-in-touch-button {
-    margin-top: 20px;
-}
-
-@media only screen and (max-width: 760px) {
-    .bio-intro {
-        text-align: left;
-        padding-top: 200px;
-        font-size: 3vh;
-        color: #8EA4C2;
-    }
-
-    .get-in-touch-button, .bio-intro {
-        margin-left: 30px;
-    }
-
-    .get-in-touch-button {
-        margin-top: 20px;
-    }
-
-    .bio-name {
-        font-size: 1vh;
-    }
-}
-
-.bio-name {
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: #ff9933;
-    font-size: 7vh;
-}
-
-.bio-paragraph {
-    font-size: large;
 }
 

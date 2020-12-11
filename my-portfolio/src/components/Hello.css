@@ -1,0 +1,12 @@
+.bio-intro {
+    text-align: left;
+    font-size: 5vh;
+    color: #8EA4C2;
+    line-height: 1.5em;
+}
+.ts-name {
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    font-family: 'Dosis', sans-serif;
+    color: #ff9933;
+    font-size: 8vh;
+}

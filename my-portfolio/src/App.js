@@ -1,27 +1,26 @@
 import React, { Component } from "react";
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import About from "./components/About";
-import Home from "./components/Home";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Social from "./components/Social";
 import ContactPage from "./components/ContactPage";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+
 
 class App extends Component {
-  
-  render() {
+
+  render(){
     return (
-      <>
-        <Router>
+        <BrowserRouter>
+          <Nav />
           <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={ContactPage} />
+            <Route exact path="/" component={Home} />
+            <Route path="/say_hello" component={ContactPage} />
           </Switch>
           <Social />
-        </Router>
-      </>
+        </BrowserRouter>
     );
   }
 }
-
 export default App;
+

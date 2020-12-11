@@ -1,12 +1,10 @@
 .button {
-  background: #3f5374;
+  background: #1e3945;
   color: #95acca;
-  box-shadow: 4px 4px 0px 0px #bac5d4;
+  box-shadow: 4px 4px 0px 0px #36677d;
   border: 1px solid #ff9933;
   padding: 15px;
   font-size: 0.6em;
- 
-  
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   letter-spacing: 4px;
@@ -23,7 +21,6 @@
     justify-content: center;
   }
 }
-
 .button:hover {
   left: 3px;
   top: 3px;

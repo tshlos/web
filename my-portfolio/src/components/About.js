@@ -1,38 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
+import "./About.css";
+import cartoon from "./img/cartoon.jpg";
 
+function About() {
 
-class About extends Component {
-
-    state = {
-        clicked: false,
-    }
-
-    handleGetInTouchClick = () => {
-        this.setState({
-            clicked: true
-        });
-        this.props.history.push("/contact")
-        // window.location.href = "http://localhost:3000/contact";
-    }
-
-
-    render() {
-        return (
-            <div className="profile-container">
-                <div className="profile-wrapper"> 
-                    <p className="bio-intro"> 
-                        Hi there! My name is
-                        <p className="bio-name"> Taci Shlosberg.</p>
-                        <p className="bio-paragraph">
-                            I'm a Full-Stack Web Developer based in <br/>
-                            San Francisco, CA and a UI/UX enthusiast.
-                        </p>
-                    </p>
-                    <button className="button get-in-touch-button" onClick={this.handleGetInTouchClick}> Get in Touch </button>
-             </div>
-         </div>
-        )
-    }
+    return (
+        <div> 
+            <a id="about-me"> </a>
+            <p className="about-me-paragraph"> 
+                <img className="cartoon-img" src={cartoon} alt="cartoon-img"></img>
+                Hello! I'm Taci Shlosberg, a full-stack Software Engineer, currently living in San Francisco, CA.
+                I am both driven and self motivated, and I'm constantly experimenting with new technologies. I'm passionate about 
+                Web Development, and strive to better myself as a developer. When I'm not keeping busy with coding, you can find me
+                lifting heavy things and putting them down or redecorating my apartment. 
+            </p> 
+        </div>
+    )
 }
-
 export default About;
