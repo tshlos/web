@@ -54,3 +54,11 @@ section::before{
 section::after{
   box-sizing: inherit;
 }
+
+@media screen 
+  and (max-width: 760px) {
+    .text-part {
+      width: 75%;
+      height: 50%;
+    }
+}

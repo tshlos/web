@@ -10,3 +10,12 @@
     color: #ff9933;
     font-size: 8vh;
 }
+
+@media only screen and (max-width: 760px) {
+    .bio-intro {
+      font-size: 3vh;
+    }
+    .ts-name {
+        font-size: 5vh;
+    }
+  }
